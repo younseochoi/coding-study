@@ -11,7 +11,7 @@ def solution(progresses, speeds):
     for i in range(len(progresses)):
         if progresses[i] > progresses[max_time]:  # 현재(i번째)의 일이 더 오래 걸림
             answer.append(i-max_time)
-            max_time=i #max_time i번째 값으로 업데이트
+            max_time=i #max_time 현재 인덱스 i로 업데이트
 
     answer.append(len(progresses)-max_time) # 남은 일 개수 push 
     return answer
