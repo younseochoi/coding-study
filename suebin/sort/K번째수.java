@@ -9,7 +9,7 @@ class Solution {
         
         for (int i=0; i<commands.length; i++) {
             
-            // i번째 숫자(= commands[i][0])부터 j번째 숫자(= commands[i][1]) 까지 array를 자른다.
+            // i번째 숫자(= commands[i][0]-1)부터 j번째 숫자(= commands[i][1]) 까지 array를 자른다.
             
             int[] now = Arrays.copyOfRange(array, commands[i][0]-1,  commands[i][1]);
             
