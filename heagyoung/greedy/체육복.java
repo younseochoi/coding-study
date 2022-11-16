@@ -15,7 +15,8 @@ class Solution {
                 _reserve.remove(_reserve.indexOf(lost[i]));
                 lost[i]=-1;
             }
-        }
+        } //본인것은 무조건 본인이 입으므로
+
         for(int i=0;i<lost.length;i++){
             if(_reserve.contains(lost[i]-1)){
                 _reserve.remove(_reserve.indexOf(lost[i]-1));
@@ -25,11 +26,13 @@ class Solution {
                 _reserve.remove(_reserve.indexOf(lost[i]+1));
                 lost[i]=-1;
             }
-        } 
+        } //작은애가 큰거를 입을 수 있는 경우를 먼저 계산
+
         for(int j:lost){
             if( j!=-1)
                 answer--;
-        }
+        }//전체 학생 중 빌리지 못한 학생 수 체크
+
         return answer;
     }
 }
