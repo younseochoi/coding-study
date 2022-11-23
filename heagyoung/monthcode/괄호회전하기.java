@@ -1,4 +1,5 @@
 import java.util.*;
+// 
 class Solution {
     public int check(String a) {
         String []word = a.split("");
@@ -37,14 +38,16 @@ class Solution {
         if(stack.size()!=0)
             return -1;
         return 0;
-    }
+    } 
+    //문자열이 완전한지 아닌지 스택으로 체크 
+    //스택이 비지않는다면 중간에 멈춘것이므로 완전하지 않음 -1
     public int solution(String s) {
         int answer = s.length();
         for(int i=0;i<s.length();i++){
             answer+=check(s);
             s=s.substring(1)+s.charAt(0);
         }   
-        
+        // 문자들을 돌리면서 확인
         return answer;
     }
 }
