@@ -25,3 +25,5 @@ class Solution {
         return answer;
     }
 }
+
+//다풀고 알게되었지만 Integer.phaseInt 활용시 n진수->10진수 변경가늠
