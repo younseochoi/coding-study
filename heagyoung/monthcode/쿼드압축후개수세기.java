@@ -1,6 +1,15 @@
 class Solution {
     int zero=0;
     int one=0;
+
+    //전체를 재귀함수를 사용해서 2x2 배열이 될때까지 잘라서
+    //배열의 내용이 같으면 배열 수 리턴
+    //다르면 -1을 리턴하고 zero와 one의 수를 더해줌
+
+    //리턴받은 값들로 다시 배열을 이뤄서 내부값을 비교
+    //배열의 내용이 같으면 배열 수 리턴
+    //다르면 -1을 리턴하고 zero와 one의 수를 더해줌
+    
     public int check(int[][] arr){
         if(arr.length==2){
             int n1=0, n0=0;
