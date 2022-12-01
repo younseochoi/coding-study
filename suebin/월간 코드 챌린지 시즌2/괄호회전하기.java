@@ -33,7 +33,6 @@ class Solution {
             // 여는 괄호 : stack에 add
             // 닫는 괄호 : stack.peek()에 자신과 같은 여는 괄호가 있을 때만 stack.pop()
             
-            try {
                 switch(s.charAt(i)) {
                     case '(' :
                         stack.add('(');
@@ -45,21 +44,19 @@ class Solution {
                         stack.add('[');
                         break;
                     case ')' :
-                        if (stack.peek() == '(') stack.pop();
+                        if (!stack.empty() && stack.peek() == '(') stack.pop();
                         else return false;
                         break;
                      case '}' :
-                        if (stack.peek() == '{') stack.pop();
+                        if (!stack.empty() && stack.peek() == '{') stack.pop();
                         else return false;
                         break;
                      case ']' :
-                        if (stack.peek() == '[') stack.pop();
+                        if (!stack.empty() && stack.peek() == '[') stack.pop();
                         else return false;
                         break;
                 } 
             }
-            catch(Exception e) { return false; }
-        }
         
         // stack이 비었다면 올바른 괄호 문자열이다.
         
@@ -68,8 +65,6 @@ class Solution {
         return true;
     }
 }
-
-// 궁금한 점 : stack은 try ~ catch를 써야만 가능한건가요 ?
 
 
 /*
