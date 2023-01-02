@@ -32,15 +32,13 @@ public class Main {
 		st = new StringTokenizer(br.readLine());
 		StringBuilder result = new StringBuilder();
 		
-		for (int i=0; i<M; i++) {
-			
-			// binarySearch 함수를 호출하여 이분탐색을 한다.
-			
+        // binarySearch 함수를 호출하여 이분탐색을 한다.
+
+		for (int i=0; i<M; i++) {			
 			result.append(binarySearch(numCard, Integer.parseInt(st.nextToken())) + " ");
 		}
 		
 		System.out.println(result);
-        br.close();
 		
 	}
 	
