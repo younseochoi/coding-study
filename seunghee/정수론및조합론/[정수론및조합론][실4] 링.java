@@ -1,5 +1,3 @@
-//출처 : https://st-lab.tistory.com/155
-
 package backjoon;
 
 import java.io.BufferedReader;
