@@ -6,13 +6,11 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
         
 public class Main {
-	
 	public static int array[];
 	public static boolean visit[];
 	public static StringBuilder result = new StringBuilder();
 	
 	public static void main(String[] args) throws IOException {		
-		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
@@ -29,7 +27,6 @@ public class Main {
 	}
 	
 	public static void backtracking(int N, int M, int depth) {
-		
 		if (M == depth) {
 			for (int i : array) {
 				result.append(i + " ");
@@ -47,5 +44,4 @@ public class Main {
 			}
 		}
 	}
-	
 }
