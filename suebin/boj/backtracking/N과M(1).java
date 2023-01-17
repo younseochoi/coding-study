@@ -1,11 +1,13 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
         
 public class Main {
-    
-    public static int array[];
+	
+	public static int array[];
 	public static boolean visit[];
 	public static StringBuilder result = new StringBuilder();
 	
