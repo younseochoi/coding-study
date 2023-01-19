@@ -1,6 +1,10 @@
 package backjoon;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -28,7 +32,7 @@ public class Main {
     }
     
     private static void recursion(int K) throws IOException {
-        if (K == M) {
+        if (K == M) { // 모든 배열의 원소가 찼을 때,
             for (int i = 0; i < M; i++) {
                 bw.write(arr[i] + " ");
             }
@@ -36,15 +40,18 @@ public class Main {
         } else {
         	for (int i = 1; i <= N; i++) {
         		if (!isUsed[i]) {
-        			arr[K] = i;
-        			isUsed[i] = true;
-        			recursion(K + 1);
-        			isUsed[i] = false;
+        			if(K !=0 && arr[K-1]>i) {
+        				continue;
+        			}
+    				arr[K] = i;
+    				isUsed[i] = true;
+    				recursion(K + 1);
+    				isUsed[i] = false;
         		}
         	}        	
         }
     }
 }
 /*
- * 54368930	dnffktmdgml	 15649	맞았습니다!!	31444	324	Java 11 / 수정	1976	
+54373850	dnffktmdgml	 15650	맞았습니다!!	16260	144	Java 11 / 수정	1247	
  */
